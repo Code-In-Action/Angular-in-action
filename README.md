@@ -1,2 +1,1 @@
-# Angular-Study
-Angular Study demo
+# Angular in action
