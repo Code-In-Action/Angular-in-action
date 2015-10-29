@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>作用域继承及风险</title>
+        <script type="text/javascript" src="../angular.js"></script>
+    </head>
+    <body ng-app ng-init="name='World'">
+        <h1>hello {{name}}</h1>
+        <div ng-controller="HelloCtrl">
+            say hello to: <input type="text" ng-model="name" value="">
+            <h2>hello,{{name}}</h2>
+
+        </div>
+        <script>
+            // 发现 h1 name 是不会变的，所以在 angular 里即使上下文的变量是一样的也不会影响两者的值
+            var HelloCtrl = function ($scope) {
+                $scope.name = "world";
+            }
+
+        </script>
+
+    </body>
+</html>
