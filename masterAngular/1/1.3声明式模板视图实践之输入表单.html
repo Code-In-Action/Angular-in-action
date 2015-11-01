@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>输入表单-声明式试图模板</title>
+        <link rel="stylesheet" href="../bootstrap.css" media="screen" title="no title" charset="utf-8">
+        <script type="text/javascript" src="../angular.js"></script>
+    </head>
+    <body>
+        <div class="container" ng-controller="TextAreaWithLimitCtrl">
+            <div class="row">
+                <span>Remaining:{{remaining()}}</span>
+                <textarea ng-model="message" rows="8" cols="40">{{message}}</textarea>
+            </div>
+            <div class="row">
+                <button ng-click="send()" name="button">send</button>
+                <button ng-click="clear()" name="button">clear</button>
+            </div>
+        </div>
+    </body>
+</html>
